@@ -1,39 +1,40 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import authSelectors from 'redux/auth/auth-selectors';
+// import { useState } from 'react';
+// import { useSelector } from 'react-redux';
+// import authSelectors from 'redux/auth/auth-selectors';
 
-import { Box } from 'components/Box/Box';
-import Modal from 'components/Modal/Modal';
-import Section from 'components/Section/Section';
-import RegisterForm from 'components/RegisterForm/RegisterForm';
+// import { Box } from 'components/Box/Box';
+// import Modal from 'components/Modal/Modal';
+// import Section from 'components/Section/Section';
+// import RegisterForm from 'components/RegisterForm/RegisterForm';
 
-import PhoneImg from '../../images/phoneYest.jpg';
-import PhoneImgSmall from '../../images/phoneYesSmall.png';
-import PhoneImg2 from '../../images/phoneTomor.jpg';
-import PhoneImg2Small from '../../images/phoneTmSmall.png';
+// import PhoneImg from '../../images/phoneYest.jpg';
+// import PhoneImgSmall from '../../images/phoneYesSmall.png';
+// import PhoneImg2 from '../../images/phoneTomor.jpg';
+// import PhoneImg2Small from '../../images/phoneTmSmall.png';
 
 // import { useAuth } from '../../hooks';
 
-import {
-  SectionText,
-  SectionTitle,
-  StyledButton,
-  Wrap,
-} from './HomePage.styled';
+// import {
+//   SectionText,
+//   SectionTitle,
+//   StyledButton,
+//   Wrap,
+// } from './HomePage.styled';
 
 const HomePage = () => {
   // const { isLoggedIn } = useAuth()
-  const isLoggedIn = useSelector(authSelectors.getIsLOggedIn);
+  // const isLoggedIn = useSelector(authSelectors.getIsLOggedIn);
 
-  const [isOpenRegister, setIsOpenRegister] = useState(false);
+  // const [isOpenRegister, setIsOpenRegister] = useState(false);
 
-  const toggleModalRegister = () => {
-    setIsOpenRegister(prev => !prev);
-  };
+  // const toggleModalRegister = () => {
+  //   setIsOpenRegister(prev => !prev);
+  // };
 
   return (
     <div>
-      <Section textAlign="center">
+      <h1>Hello world Home Page</h1>
+      {/* <Section textAlign="center">
         <Wrap bgImage={PhoneImg} bgImageSmall={PhoneImgSmall}>
           <SectionTitle>ARE YOU STILL IN THE PAST?</SectionTitle>
           <SectionText>
@@ -68,7 +69,7 @@ const HomePage = () => {
             </Modal>
           )}
         </Wrap>
-      </Section>
+      </Section> */}
     </div>
   );
 };
