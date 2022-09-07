@@ -10,11 +10,10 @@ import { Route, Routes } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 // import userOperations from 'redux/auth/auth-operations';
 // import authSelectors from 'redux/auth/auth-selectors';
-import PublicRoute from 'components/Routes/PublicRoute';
+// import PublicRoute from 'components/Routes/PublicRoute';
 import About from 'pages/About/About';
 
 // import { useAuth } from '../../hooks';
-
 
 const App = () => {
   // const dispatch = useDispatch();
@@ -28,31 +27,16 @@ const App = () => {
 
   return (
     <>
-   
-        <>
-          <Routes>
-            <Route path="/" element={<SharedLayout />}>
-              <Route
-                index
-                element={
-                  <PublicRoute>
-                    <HomePage />
-                  </PublicRoute>
-                }
-              />
-              <Route
-                path="about"
-                element={
-                  <PublicRoute>
-                    <About />
-                  </PublicRoute>
-                }
-              />
-              {/* <Route path="contacts" element={<ContactPage />} /> */}
-            </Route>
-          </Routes>
-        </>
-     
+      <>
+        <Routes>
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="about" element={<About />} />
+            {/* <Route path="contacts" element={<ContactPage />} /> */}
+          </Route>
+        </Routes>
+      </>
+
       {/* <ToastContainer autoClose={3000} theme="colored" pauseOnHover /> */}
     </>
   );

@@ -1,12 +1,12 @@
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 // import { useState } from 'react';
-import authSelectors from 'redux/auth/auth-selectors';
+// import authSelectors from 'redux/auth/auth-selectors';
 
-import { Box } from 'components/Box/Box';
+// import { Box } from 'components/Box/Box';
 import { StyledNavLink } from '../SharedLayout/SharedLayout.styled';
 // import Modal from 'components/Modal/Modal';
 // import Button from 'components/Button/Button';
-import UserMenu from 'components/UserMenu/UserMenu';
+// import UserMenu from 'components/UserMenu/UserMenu';
 // import LoginForm from 'components/LoginForm/LoginForm';
 // import RegisterForm from 'components/RegisterForm/RegisterForm';
 
@@ -14,7 +14,7 @@ import UserMenu from 'components/UserMenu/UserMenu';
 
 const DesctopMenu = () => {
   // const { isLoggedIn } = useAuth()
-  const isLoggedIn = useSelector(authSelectors.getIsLOggedIn);
+  // const isLoggedIn = useSelector(authSelectors.getIsLOggedIn);
 
   // const [isOpenLogIn, setIsOpenLogIn] = useState(false);
   // const [isOpenRegister, setIsOpenRegister] = useState(false);
@@ -28,17 +28,14 @@ const DesctopMenu = () => {
   // };
 
   return (
-    <Box display="flex" alignItems="center" justifyContent="space-between">
+    <div>
       <nav>
         <StyledNavLink to="/">Home</StyledNavLink>
         <StyledNavLink to="/about">About</StyledNavLink>
         {/* {isLoggedIn && <StyledNavLink to="/contacts">PhoneBook</StyledNavLink>} */}
       </nav>
       <div>
-        {isLoggedIn ? (
-          <UserMenu />
-        ) : (
-          <>
+       
             {/* <StyledNavLink to="/register">REGISTER</StyledNavLink> */}
             {/* <StyledNavLink to="/login">LOGIN</StyledNavLink> */}
             {/* <Button type="button" onClick={toggleModalRegister}>
@@ -49,8 +46,8 @@ const DesctopMenu = () => {
                 Login
               </Button>
             </Box> */}
-          </>
-        )}
+          
+        
       </div>
       {/* {isOpenRegister && (
         <Modal closeModal={toggleModalRegister}>
@@ -62,7 +59,7 @@ const DesctopMenu = () => {
           <LoginForm onSaveAndClose={toggleModalLogIn} />
         </Modal>
       )} */}
-    </Box>
+    </div>
   );
 };
 

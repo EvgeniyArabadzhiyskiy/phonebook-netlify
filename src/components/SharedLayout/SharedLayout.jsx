@@ -1,6 +1,6 @@
 // import { useState } from 'react';
 import { Suspense } from 'react';
-import { useMedia } from 'react-use';
+// import { useMedia } from 'react-use';
 import { Outlet } from 'react-router-dom';
 // import { GiHamburgerMenu } from 'react-icons/gi';
 
@@ -15,7 +15,7 @@ import DesctopMenu from 'components/DesctopMenu/DesctopMenu';
 
 const SharedLayout = () => {
   // const isMobile = useMedia('(max-width: 479px)');
-  const isDesctop = useMedia('(min-width: 480px)');
+  // const isDesctop = useMedia('(min-width: 480px)');
 
   // const [isOpenMenu, setIsOpenMenu] = useState(false);
   // const [isOpenLogIn, setIsOpenLogIn] = useState(false);
@@ -39,7 +39,7 @@ const SharedLayout = () => {
     <>
       <Header>
         <Container>
-          {isDesctop && <DesctopMenu />}
+           <DesctopMenu />
 
           {/* {isMobile && (
             <IconButtonBurger type="button" onClick={toggleMenu}>
