@@ -1,8 +1,5 @@
 import { useState } from 'react';
 import { ImUserPlus } from 'react-icons/im';
-import { useSelector } from 'react-redux';
-// import userOperations from 'redux/auth/auth-operations';
-import authSelectors from 'redux/auth/auth-selectors';
 import { Navigate } from 'react-router-dom';
 
 import Modal from '../Modal/Modal';
@@ -12,13 +9,12 @@ import PhoneForm from 'components/PhoneForm/PhoneForm';
 import ContactList from 'components/ContactList/ContactList';
 import FilterContacts from 'components/FilterContacts/FilterContacts';
 
-// import { useAuth } from '../../hooks';
+import { useAuth } from '../../hooks/useAuth';
 
 const PhoneBook = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // const { isLoggedIn } = useAuth()
-  const isLoggedIn = useSelector(authSelectors.getIsLOggedIn);
+  const { isLoggedIn } = useAuth()
 
   const toggleModal = () => {
     setIsOpen(prev => !prev);

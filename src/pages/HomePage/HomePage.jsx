@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import authSelectors from 'redux/auth/auth-selectors';
 
 import { Box } from 'components/Box/Box';
 import Modal from 'components/Modal/Modal';
@@ -12,7 +10,7 @@ import PhoneImgSmall from '../../images/phoneYesSmall.png';
 import PhoneImg2 from '../../images/phoneTomor.jpg';
 import PhoneImg2Small from '../../images/phoneTmSmall.png';
 
-// import { useAuth } from '../../hooks';
+import { useAuth } from '../../hooks/useAuth';
 
 import {
   SectionText,
@@ -22,8 +20,7 @@ import {
 } from './HomePage.styled';
 
 const HomePage = () => {
-  // const { isLoggedIn } = useAuth()
-  const isLoggedIn = useSelector(authSelectors.getIsLOggedIn);
+  const { isLoggedIn } = useAuth()
 
   const [isOpenRegister, setIsOpenRegister] = useState(false);
 

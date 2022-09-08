@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import authSelectors from 'redux/auth/auth-selectors';
 import userOperations from 'redux/auth/auth-operations';
 
-// import { useAuth } from '../../hooks';
+import { useAuth } from '../../hooks/useAuth';
 
 import { LoguotBtn, UserName } from './UserMenu.styled';
 
@@ -11,8 +11,7 @@ const UserMenu = () => {
   const dispatch = useDispatch();
   const name = useSelector(authSelectors.getName);
 
-  // const { isLoggedIn } = useAuth()
-  const isLoggedIn = useSelector(authSelectors.getIsLOggedIn);
+  const { isLoggedIn } = useAuth()
   const navigate = useNavigate();
 
   const logOut = () => {

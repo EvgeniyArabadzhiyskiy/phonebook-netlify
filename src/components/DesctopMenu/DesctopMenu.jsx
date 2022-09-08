@@ -1,6 +1,4 @@
-import { useSelector } from 'react-redux';
 import { useState } from 'react';
-import authSelectors from 'redux/auth/auth-selectors';
 
 import { Box } from 'components/Box/Box';
 import { StyledNavLink } from '../SharedLayout/SharedLayout.styled';
@@ -10,11 +8,10 @@ import UserMenu from 'components/UserMenu/UserMenu';
 import LoginForm from 'components/LoginForm/LoginForm';
 import RegisterForm from 'components/RegisterForm/RegisterForm';
 
-// import { useAuth } from '../../hooks';
+import { useAuth } from '../../hooks/useAuth';
 
 const DesctopMenu = () => {
-  // const { isLoggedIn } = useAuth()
-  const isLoggedIn = useSelector(authSelectors.getIsLOggedIn);
+  const { isLoggedIn } = useAuth();
 
   const [isOpenLogIn, setIsOpenLogIn] = useState(false);
   const [isOpenRegister, setIsOpenRegister] = useState(false);

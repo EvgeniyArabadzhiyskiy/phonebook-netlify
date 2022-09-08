@@ -7,20 +7,19 @@ import HomePage from 'pages/HomePage/HomePage';
 import { Route, Routes } from 'react-router-dom';
 
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import userOperations from 'redux/auth/auth-operations';
-import authSelectors from 'redux/auth/auth-selectors';
 import PublicRoute from 'components/Routes/PublicRoute';
 import About from 'pages/About/About';
 
-// import { useAuth } from '../../hooks';
+import { useAuth } from '../../hooks/useAuth';
 
 
 const App = () => {
   const dispatch = useDispatch();
 
-  // const { isFetchCurrentUser } = useAuth()
-  const isFetchCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
+  const { isFetchCurrentUser } = useAuth()
+  console.log("App ~ isFetchCurrentUser", isFetchCurrentUser);
 
   useEffect(() => {
     dispatch(userOperations.fetchCurrentUser());
